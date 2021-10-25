@@ -1,4 +1,5 @@
 import { ProxyState } from "../AppState.js"
+import { HousesService } from "../Services/HousesService.js"
 
 function _drawHouse() {
     const houses = ProxyState.houses
@@ -13,7 +14,9 @@ export class HousesController {
     constructor() {
         ProxyState.on('houses', _drawHouse)
     }
-
+    deleteHouse(id) {
+        housesService.deleteHouse(id)
+    }
     showHouses() {
         _drawHouse()
         document.getElementById('form-button').classList.remove('visually-hidden')

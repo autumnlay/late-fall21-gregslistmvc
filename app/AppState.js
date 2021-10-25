@@ -18,6 +18,7 @@ class AppState extends EventEmitter {
     new House({ year: 2000, price: 200000, sqft: 3000, bedroom: 4, bathroom: 2.5, description: 'It\'s better now', imgURL: 'https://freepngimg.com/thumb/house/27431-9-house.png' }),
     new House({ year: 2020, price: 1000000, sqft: 10000, bedroom: 6, bathroom: 6.5, description: 'It\'s decent enough', imgURL: 'http://reallynicehouses.com/wp-content/uploads/IMG_1397-1.jpg' })
   ]
+
 }
 
 export const ProxyState = new Proxy(new AppState(), {
